@@ -5,12 +5,23 @@ img=Image.open(path);
 
 pixels=img.load();
 width, height = img.size;
-pix = [[0 for x in range(height)] for y in range(width)]; 
-
-print(pixels[1,1]);
+chars = [[0 for y in range(height)] for x in range(width)]; 
 
 for i in range(width):
     for j in range(height):
-        pix[i][j]=pixels[i,j];
-
-print(pix[1][1]);
+        (r,g,b)=pixels[i,j];
+        sum=r+g+b;
+        if sum>600:
+            pass;
+        elif sum>500:
+            pass;
+        elif sum>400:
+            pass;
+        elif sum>300:
+            pass;
+        elif sum>200:
+            pass;
+        elif sum>100:
+            pass;
+        else:
+            pass;
