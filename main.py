@@ -11,8 +11,6 @@ width,height=img.size;
 pixels=img.load();
 chars = [[0 for i in range(height)] for j in range(width)]; 
 
-# ' ; ! % & $ #
-
 f=open("output.txt","w");
 
 for i in range(width):
