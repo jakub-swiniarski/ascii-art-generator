@@ -1,3 +1,3 @@
 # ASCII Art Generator
 
-![Screenshot from 2023-07-10 23-44-14](https://github.com/jakub-swiniarski/ascii-art-generator/assets/77209709/1c2d590f-9f8d-4daf-9489-be16146be833)
+![Screenshot from 2023-07-10 23-45-41](https://github.com/jakub-swiniarski/ascii-art-generator/assets/77209709/8be2dc47-8367-4dd0-8106-2d09b78f9f75)
