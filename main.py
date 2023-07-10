@@ -2,11 +2,14 @@ from PIL import Image
 
 path=str(input("Input the image path: "));
 img=Image.open(path);
-img=img.resize((100,100),Image.LANCZOS);
+width,height=img.size;
+ratio=int(width/height);
+img=img.rotate(90);
+img=img.resize((100,100*ratio*2),Image.LANCZOS);
+width,height=img.size;
 
 pixels=img.load();
-width, height = img.size;
-chars = [[0 for y in range(height)] for x in range(width)]; 
+chars = [[0 for i in range(height)] for j in range(width)]; 
 
 # ' ; ! % & $ #
 
@@ -37,6 +40,7 @@ for i in range(width):
             
         else:
             chars[i][j]="#";
+        
         line+=chars[i][j];
     f.write(line+"\n");
 
