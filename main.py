@@ -45,3 +45,4 @@ for i in range(width):
     f.write(line+"\n");
 
 f.close();
+print("The output is saved in 'output.txt'.");
