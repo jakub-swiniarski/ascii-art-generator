@@ -7,21 +7,32 @@ pixels=img.load();
 width, height = img.size;
 chars = [[0 for y in range(height)] for x in range(width)]; 
 
+# ' ; ! % & $ #
+
 for i in range(width):
     for j in range(height):
         (r,g,b)=pixels[i,j];
         sum=r+g+b;
         if sum>600:
-            pass;
+            chars[i][j]="'";
+
         elif sum>500:
-            pass;
+            chars[i][j]=";";
+
         elif sum>400:
-            pass;
+           chars[i][j]="!";
+ 
         elif sum>300:
-            pass;
+           chars[i][j]="%";
+ 
         elif sum>200:
-            pass;
+           chars[i][j]="&";
+ 
         elif sum>100:
-            pass;
+            chars[i][j]="$";
+            
         else:
-            pass;
+            chars[i][j]="#";
+
+        print(chars[i][j]);
+    print("\n");
