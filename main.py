@@ -22,23 +22,41 @@ for i in range(width):
         if sum>600:
             chars[i][j]="'";
 
+        elif sum>550:
+            chars[i][j]='"';
+
         elif sum>500:
-            chars[i][j]=";";
+            chars[i][j]=":";
+
+        elif sum>450:
+            chars[i][j]=";"
 
         elif sum>400:
            chars[i][j]="!";
- 
+    
+        elif sum>350:
+            chars[i][j]="+";
+
         elif sum>300:
            chars[i][j]="%";
  
+        elif sum>250:
+            chars[i][j]="?"
+
         elif sum>200:
-           chars[i][j]="&";
+           chars[i][j]="/";
  
+        elif sum>150:
+            chars[i][j]="&";
+
         elif sum>100:
             chars[i][j]="$";
             
-        else:
+        elif sum>50:
             chars[i][j]="#";
+
+        else:
+            chars[i][j]="@";
         
         line+=chars[i][j];
     f.write(line+"\n");
