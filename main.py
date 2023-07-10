@@ -9,6 +9,8 @@ chars = [[0 for y in range(height)] for x in range(width)];
 
 # ' ; ! % & $ #
 
+f=open("output","w");
+
 for i in range(width):
     for j in range(height):
         (r,g,b)=pixels[i,j];
@@ -33,6 +35,7 @@ for i in range(width):
             
         else:
             chars[i][j]="#";
-
-        print(chars[i][j]);
-    print("\n");
+            
+        f.write(chars[i][j]);
+    f.write("\n");
+f.close();
