@@ -2,6 +2,7 @@ from PIL import Image
 
 path=str(input("Input the image path: "));
 img=Image.open(path);
+img=img.resize((100,100),Image.LANCZOS);
 
 pixels=img.load();
 width, height = img.size;
@@ -9,9 +10,10 @@ chars = [[0 for y in range(height)] for x in range(width)];
 
 # ' ; ! % & $ #
 
-f=open("output","w");
+f=open("output.txt","w");
 
 for i in range(width):
+    line="";
     for j in range(height):
         (r,g,b)=pixels[i,j];
         sum=r+g+b;
@@ -35,7 +37,7 @@ for i in range(width):
             
         else:
             chars[i][j]="#";
-            
-        f.write(chars[i][j]);
-    f.write("\n");
+        line+=chars[i][j];
+    f.write(line+"\n");
+
 f.close();
