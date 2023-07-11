@@ -6,7 +6,7 @@ width,height=img.size;
 ratio=int(width/height);
 img=img.rotate(90);
 img=img.transpose(Image.FLIP_TOP_BOTTOM);
-img=img.resize((100,100*ratio*2),Image.LANCZOS);
+img=img.resize((100,int(100*ratio*1.77)),Image.LANCZOS);
 width,height=img.size;
 
 pixels=img.load();
