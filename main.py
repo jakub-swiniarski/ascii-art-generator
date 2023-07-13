@@ -15,7 +15,7 @@ chars = [[0 for i in range(height)] for j in range(width)];
 f=open("output.txt","w");
 
 for i in range(width):
-    line="";
+    #line="";
     for j in range(height):
         (r,g,b)=pixels[i,j];
         sum=r+g+b;
@@ -58,8 +58,9 @@ for i in range(width):
         else:
             chars[i][j]="@";
         
-        line+=chars[i][j];
-    f.write(line+"\n");
+        #line+=chars[i][j];
+        f.write(chars[i][j]);
+    f.write("\n");
 
 f.close();
 print("The output is saved in 'output.txt'.");
