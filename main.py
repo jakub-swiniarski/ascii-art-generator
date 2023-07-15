@@ -10,6 +10,7 @@ img=img.resize((100,int(100*ratio*1.77)),Image.LANCZOS);
 width,height=img.size;
 
 pixels=img.load();
+img.close();
 
 f=open("output.txt","w");
 
