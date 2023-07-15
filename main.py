@@ -1,5 +1,5 @@
 from PIL import Image;
-import numpy as np;
+#import numpy as np;
 
 path=str(input("Input the image path: "));
 img=Image.open(path);
