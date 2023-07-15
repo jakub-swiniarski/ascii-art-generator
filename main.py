@@ -10,7 +10,6 @@ img=img.resize((100,int(100*ratio*1.77)),Image.LANCZOS);
 width,height=img.size;
 
 pixels=img.load();
-chars = [[0 for i in range(height)] for j in range(width)]; 
 
 f=open("output.txt","w");
 
@@ -19,45 +18,45 @@ for i in range(width):
         (r,g,b)=pixels[i,j];
         sum=r+g+b;
         if sum>600:
-            chars[i][j]="'";
+            char="'";
 
         elif sum>550:
-            chars[i][j]='"';
+            char='"';
 
         elif sum>500:
-            chars[i][j]=":";
+            char=":";
 
         elif sum>450:
-            chars[i][j]=";"
+            char=";"
 
         elif sum>400:
-           chars[i][j]="!";
+            char="!";
     
         elif sum>350:
-            chars[i][j]="+";
+            char="+";
 
         elif sum>300:
-           chars[i][j]="%";
+            char="%";
  
         elif sum>250:
-            chars[i][j]="?"
+            char="?"
 
         elif sum>200:
-           chars[i][j]="/";
+            char="/";
  
         elif sum>150:
-            chars[i][j]="&";
+            char="&";
 
         elif sum>100:
-            chars[i][j]="$";
+            char="$";
             
         elif sum>50:
-            chars[i][j]="#";
+            char="#";
 
         else:
-            chars[i][j]="@";
+            char="@";
         
-        f.write(chars[i][j]);
+        f.write(char);
     f.write("\n");
 
 f.close();
