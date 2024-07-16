@@ -5,7 +5,7 @@ width_desired = int(input("Input the desired image width (characters): "))
 img           = Image.open(path);
 width, height = img.size;
 ratio         = width / height;
-img           = img.resize((width_desired, int(width_desired / ratio)), Image.LANCZOS);
+img           = img.resize((width_desired, int(width_desired / ratio / 2)), Image.LANCZOS);
 width, height = img.size;
 pixels        = img.load();
 
