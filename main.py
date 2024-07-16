@@ -36,22 +36,22 @@ for y in range(height):
             char = "+";
 
         elif sum > 300:
-            char = "%";
+            char = "?";
  
         elif sum > 250:
-            char = "?"
+            char = "/"
 
         elif sum > 200:
-            char = "/";
+            char = "%";
  
         elif sum > 150:
-            char = "&";
+            char = "#";
 
         elif sum > 100:
-            char = "$";
+            char = "&";
             
         elif sum > 50:
-            char = "#";
+            char = "$";
 
         else:
             char = "@";
