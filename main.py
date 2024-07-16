@@ -1,12 +1,11 @@
 from PIL import Image;
 
 path          = str(input("Input the image path: "));
+width_desired = int(input("Input the desired image width (characters): "))
 img           = Image.open(path);
 width, height = img.size;
 ratio         = width / height;
-img           = img.rotate(90);
-img           = img.transpose(Image.FLIP_TOP_BOTTOM);
-img           = img.resize((100, int(100 * ratio)), Image.LANCZOS);
+img           = img.resize((width_desired, int(width_desired / ratio)), Image.LANCZOS);
 width, height = img.size;
 pixels        = img.load();
 
@@ -14,9 +13,9 @@ img.close();
 
 f=open("output.txt", "w");
 
-for i in range(width):
-    for j in range(height):
-        (r, g, b) = pixels[i, j];
+for y in range(height):
+    for x in range(width):
+        (r, g, b) = pixels[x, y];
         sum = r + g + b;
         if sum > 600:
             char = "'";
